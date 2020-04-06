@@ -4,13 +4,17 @@
 
 ### Computer Science Projects
 
+[Vigenère Cipher](/vigenerecipher)
+
+<img src="images/vigchiper.jpg"/>
+
+---
+
 [Caesar Cipher](/caesarcipher)
 
 <img src="images/treatycipher.jpg"/>
 
 ---
-[Vigenère Cipher](/vigenerecipher)
-<img src="images/vigchip.jpg"/>
 
 ---
 [Project 3 Title](http://example.com/)
