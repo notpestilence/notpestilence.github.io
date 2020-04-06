@@ -5,7 +5,7 @@
 ### Computer Science Projects
 
 [Caesar Cipher](/sample_page-Copy1)
-<img src="images/cesar.png?raw=true"/>
+<img src="popup_2.png"/>
 
 ---
 [Project 2 Title](/pdf/sample_presentation.pdf)
