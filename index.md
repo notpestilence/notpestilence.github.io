@@ -6,7 +6,7 @@
 
 [Caesar Cipher](/sample_page-Copy1)
 
-<img src="images/popup_2.png"/>
+<img src="images/treatycipher.jpg"/>
 
 ---
 [Project 2 Title](/pdf/sample_presentation.pdf)
