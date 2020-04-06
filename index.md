@@ -6,7 +6,7 @@
 
 [Vigenère Cipher](/vigenerecipher)
 
-<img src="images/vigchiper.jpg"/>
+<img src="images/vigcipher.jpg"/>
 
 ---
 
