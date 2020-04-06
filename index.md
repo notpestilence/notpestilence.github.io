@@ -1,11 +1,11 @@
-## Portfolio
+## Charis Chrisna's Portfolio
 
 ---
 
-### Category Name 1 
+### Computer Science Projects
 
-[Project 1 Title](/sample_page)
-<img src="images/dummy_thumbnail.jpg?raw=true"/>
+[Caesar Cipher](/sample_page-Copy1)
+<img src="images/cesar.png?raw=true"/>
 
 ---
 [Project 2 Title](/pdf/sample_presentation.pdf)
