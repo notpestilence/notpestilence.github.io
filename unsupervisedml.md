@@ -51,10 +51,10 @@ No answer                     10
 Name: q0007_0001, dtype: int64
 ```
 Thus, we can answer the questions:
-1. Each question in the pdf is represented by the first four digits after the 'q' character. 
-2. 1189 rows.
-3. Each multiple-part question in the pdf is represented by the last four digits after the '\_' character.
-4. (the table in the printed item)
+- Each question in the pdf is represented by the first four digits after the 'q' character. 
+- 1189 rows.
+- Each multiple-part question in the pdf is represented by the last four digits after the '\_' character.
+- (the table in the printed item)
 
 ### 2. Subsituting new values for easier plotting
 I substituted strings like "Rarely" or "Often" to represent numbers, and done with multiple columns by iterating them. Since the results of Question 7 was not released on their website, iterating columns of question 7 might be a good idea to gain new insights:
