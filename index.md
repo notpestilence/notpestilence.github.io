@@ -9,6 +9,10 @@
 
 ---
 
+##### (upcoming portfolio: Parsing a Biography Novel with Regular Expression)
+
+---
+
 ## Computer Science Side Projects
 
 - [Vigenère Cipher](/vigenerecipher)
