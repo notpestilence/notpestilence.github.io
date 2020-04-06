@@ -1,4 +1,4 @@
-### This site is under construction. Stay tuned for further updates!
+# Home
 
 ---
 
@@ -9,8 +9,8 @@
 <img src="images/treatycipher.jpg"/>
 
 ---
-[Project 2 Title](/pdf/sample_presentation.pdf)
-<img src="images/dummy_thumbnail.jpg?raw=true"/>
+[Vigenère Cipher](/vigenerecipher)
+<img src="images/vigchip.jpg"/>
 
 ---
 [Project 3 Title](http://example.com/)

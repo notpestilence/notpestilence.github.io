@@ -120,7 +120,7 @@ vhfinmxkl atox kxgwxkxw tee hy maxlx hew vbiaxkl tl hulhexmx. px'ee atox mh kxte
 ...and so on. Thus, we need to trim every finished result by its corresponding iteration number. In other words, if the function undergoes the first iteration, it should only return the results of the first offset. If the function undergoes the 5th iteration, it should only return the results of the fifth offset.
 
 We can do this by:
-```
+```python
         if len(new_string) <= len(message):
             print(new_string + "\n")
         elif len(new_string) > len(message):
