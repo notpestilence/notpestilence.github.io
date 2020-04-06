@@ -1,7 +1,9 @@
 ## Project: Caesar Cipher Engine
 
 **Project description:** Builds a simple machine that takes in a string, and return that string as an encrypted message built in the same manner as the Caesar Cipher:
-<img src="images/cesar.png?raw=true"/>
+
+<img src="images/cesar.png"/>
+
 Where every encrypted string can only be decrypted if we know the 'offset', i.e. how far would we step the letters in the encrypted message to decrypt it.
 
 This project is built on Python 3.
