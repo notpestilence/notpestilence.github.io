@@ -1,8 +1,8 @@
-# Home
+# Portfolio
 
 ---
 
-### Computer Science Projects
+# Computer Science Projects
 
 [Vigenère Cipher](/vigenerecipher)
 
@@ -16,8 +16,7 @@
 
 ---
 
----
-[Project 3 Title](http://example.com/)
+[Censorship Engine](/censorship)
 <img src="images/dummy_thumbnail.jpg?raw=true"/>
 
 ---
