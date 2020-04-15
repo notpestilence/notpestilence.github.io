@@ -132,10 +132,80 @@ print(all_tweets.is_viral.value_counts())
 
 Prints:
 ```
-0    8972
-1    2127
+0    5562
+1    5537
 Name: is_viral, dtype: int64
 ```
-From this, we can first conclude that there are 2127 'Viral' tweets according to my algorithm, and 8972 'non-Viral' tweets. Further calculation on my end proves that only **19% of the dataset is classified as 'Viral'**
+From this, we can first conclude that there are 5537 'Viral' tweets according to my algorithm, and 5562 'non-Viral' tweets. Further calculation on my end proves that only **49% of the dataset is classified as 'Viral'**.
+Thinking about this for a moment, it seems highly unlikely that almost half of these tweets are classified as Viral in real-life. Maybe I shouldn't have used median as the threshold, but use `mean()` instead:
+```python
+threshold_of_viral_RT = (all_tweets.retweet_count.mean().round()) ##prints 2778
+all_tweets['is_viral'] = np.where(all_tweets.retweet_count > threshold_of_viral_RT, 1, 0)
+print(all_tweets.is_viral.value_counts())
+```
+
+Prints:
+```
+0    9625
+1    1474
+Name: is_viral, dtype: int64
+```
+Which means that there are 1474 'Viral' tweets and 9625 'non-Viral' tweets. Further calculation proves that by implementing `mean()` instead of `median()` as the threshold maker, approximately **13% of the dataset is classified as 'Viral'**
+
+`mean()` seems like a better model to use, so let's use the latter instead of the former.
 
 ## 3. Making features
+Now that we've created a label for every tweet in our dataset, we can begin thinking about which features might determine whether a tweet is viral. Here are some:
+1. The tweet's length;
+2. The user's followers;
+3. The number of hashtags in that tweet;
+4. The number of mentions in that tweet;
+5. The amount of words in that tweet;
+6. Who is tweeting (i.e. is it Andrew Ng?);
+
+First, we make an extension to our `all_tweets` dataset to answer five of the features above:
+```python
+
+# 1. The tweet's length;
+all_tweets['tweet_length'] = all_tweets.apply(lambda tweet: len(tweet['text']), axis=1)
+
+# 2. The user's followers;
+all_tweets['followers_count'] = all_tweets.apply(lambda tweet: tweet['user']['followers_count'], axis=1)
+
+# 3. The number of hashtags in that tweet;
+all_tweets['hashtag_count'] = all_tweets.apply(lambda tweet: tweet['text'].count('#'), axis=1)
+
+# 4. The number of mentions in that tweet;
+all_tweets['mention_count'] = all_tweets.apply(lambda tweet: tweet['text'].count('@'), axis=1)
+
+# 5. The amount of words in that tweet;
+all_tweets['word_count'] = all_tweets.apply(lambda tweet: len(tweet['text'].split()), axis=1)
+
+# 6. Who is tweeting;
+all_tweets['name'] = all_tweets.apply(lambda tweet: tweet['user']['screen_name'], axis=1)
+```
+
+After appending a new column to our existing DataFrame, I'm gonna build a new `features` DataFrame:
+```python
+features = all_tweets[['id', 'name', 'tweet_length', 'followers_count', 'hashtag_count', 'mention_count', 'word_count']].copy()
+features.head()
+```
+Prints:
+```
+    id          name  tweet_length  followers_count  \
+0  1024287229525598210     derekw221           140              215   
+1  1024287229512953856  alyssamajor9            77              199   
+2  1024287229504569344      Archaema           140              196   
+3  1024287229496029190        wglady           140             3313   
+4  1024287229492031490       hrs1197           140              125   
+
+   hashtag_count  mention_count  word_count  
+0              0              1          26  
+1              0              1          15  
+2              0              1          22  
+3              0              1          24  
+4              0              1          24  
+```
+We will be using these six features for the rest of the project.
+
+## 4. 
