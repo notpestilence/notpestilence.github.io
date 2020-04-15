@@ -315,4 +315,4 @@ For our model with the features:
 4. The number of mentions in that tweet
 5. The amount of words in that tweet
 
-And by iterating `k` from 1 through 100, we can see that the model performs best when `k` is around 25 and 40--with **approximately 87% accuracy**, before eventually falling into a flatline on `k` 85 onwards. 
+And by iterating `k` from 1 through 200, we can see that the model performs best when `k` is around 25 and 40--with **approximately 87% accuracy**, before eventually falling into a flatline on `k` 85 onwards. 
