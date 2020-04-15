@@ -6,6 +6,8 @@
 ### **Unsupervised Machine Learning**
 [Using K-Means Clustering to Map Survey Responses](/unsupervisedml)
 <img src="images/unsupervisedml.png"/>
+### **Supervised Machine Learning**
+[Using KNN and Naive Bayes Classifier to Classify Tweets](/supervisedml_twitter)
 
 ---
 
