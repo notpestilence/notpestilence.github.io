@@ -1,4 +1,4 @@
-# Project: Twitter Classification Algorithms
+# Project: Twitter Classification Algorithms -- Part One
 
 **Project description:** There's two parts of this project. 
 
@@ -12,7 +12,9 @@ In the second part, I wrote a system that tests the power of Naive Bayes classif
 1. How is languaged used differently in these three cities?
 2. Can the classifier automatically detect the difference between French and English? 
 3. Can it learn local phrases or slang? 
-4. Can you create tweets that trick the system?
+4. Can I create tweets that trick the system?
+
+The second part will be showcased on a different page to avoid cluttering.
 
 
 # PART ONE: PREDICTING VIRAL TWEETS
@@ -110,7 +112,7 @@ RT @KWWLStormTrack7: We are more than a month into summer but the days are getti
 Waterloo, Iowa
 ```
 
-## 2. Defining viral Tweets
+## 2. Defining viral Tweets (making labels)
 A K-Nearest Neighbor classifier is a supervised machine learning algorithm, and as a result, we need to have a dataset with tagged labels. For this specific example, we need a dataset where every tweet is marked as viral or not viral. Unfortunately, this isn't a feature of our dataset — we'll need to make it ourselves.
 
 For a tweet to be defined 'Viral', I would want to look at the number of retweets that tweet has. Let's create a new column called `is_viral` which returns 1 if the amount of retweets is high enough, and 0 otherwise. 
@@ -153,6 +155,27 @@ Name: is_viral, dtype: int64
 Which means that there are 1474 'Viral' tweets and 9625 'non-Viral' tweets. Further calculation proves that by implementing `mean()` instead of `median()` as the threshold maker, approximately **13% of the dataset is classified as 'Viral'**
 
 `mean()` seems like a better model to use, so let's use the latter instead of the former.
+```python
+labels = all_tweets[['is_viral']].copy()
+```
+
+`labels` is now:
+```
+       is_viral
+0             0
+1             0
+2             0
+3             1
+4             0
+...         ...
+11094         0
+11095         1
+11096         0
+11097         0
+11098         0
+
+[11099 rows x 1 columns]
+```
 
 ## 3. Making features
 Now that we've created a label for every tweet in our dataset, we can begin thinking about which features might determine whether a tweet is viral. Here are some:
@@ -161,7 +184,6 @@ Now that we've created a label for every tweet in our dataset, we can begin thin
 3. The number of hashtags in that tweet;
 4. The number of mentions in that tweet;
 5. The amount of words in that tweet;
-6. Who is tweeting (i.e. is it Andrew Ng?);
 
 First, we make an extension to our `all_tweets` dataset to answer five of the features above:
 ```python
@@ -180,32 +202,117 @@ all_tweets['mention_count'] = all_tweets.apply(lambda tweet: tweet['text'].count
 
 # 5. The amount of words in that tweet;
 all_tweets['word_count'] = all_tweets.apply(lambda tweet: len(tweet['text'].split()), axis=1)
-
-# 6. Who is tweeting;
-all_tweets['name'] = all_tweets.apply(lambda tweet: tweet['user']['screen_name'], axis=1)
 ```
 
 After appending a new column to our existing DataFrame, I'm gonna build a new `features` DataFrame:
 ```python
-features = all_tweets[['id', 'name', 'tweet_length', 'followers_count', 'hashtag_count', 'mention_count', 'word_count']].copy()
-features.head()
+features = all_tweets[['id', 'tweet_length', 'followers_count', 'hashtag_count', 'mention_count', 'word_count']].copy()
+print(features.head())
 ```
+
 Prints:
 ```
-    id          name  tweet_length  followers_count  \
-0  1024287229525598210     derekw221           140              215   
-1  1024287229512953856  alyssamajor9            77              199   
-2  1024287229504569344      Archaema           140              196   
-3  1024287229496029190        wglady           140             3313   
-4  1024287229492031490       hrs1197           140              125   
+                    id  tweet_length  followers_count  hashtag_count  \
+0  1024287229525598210           140              215              0   
+1  1024287229512953856            77              199              0   
+2  1024287229504569344           140              196              0   
+3  1024287229496029190           140             3313              0   
+4  1024287229492031490           140              125              0   
 
-   hashtag_count  mention_count  word_count  
-0              0              1          26  
-1              0              1          15  
-2              0              1          22  
-3              0              1          24  
-4              0              1          24  
+   mention_count  word_count  
+0              1          26  
+1              1          15  
+2              1          22  
+3              1          24  
+4              1          24  
 ```
-We will be using these six features for the rest of the project.
+We will be using these five features for the rest of the project.
 
-## 4. 
+## 4. Normalizing the data
+Recall that in step 1, we called:
+`python from sklearn.preprocessing import scale`. We will use this `scale` command to normalize the data in our `features` dataset:
+
+```python
+scaled_features = scale(features, axis=0)
+print(scaled_features)
+```
+
+Prints:
+```
+[[ 1.729237    0.6164054  -0.02878298 -0.32045057 -0.08781719  1.15105133]
+ [ 1.72885717 -1.64577622 -0.02886246 -0.32045057 -0.08781719 -0.7854869 ]
+ [ 1.72860529  0.6164054  -0.02887736 -0.32045057 -0.08781719  0.44685561]
+ ...
+ [-1.72738068  0.6164054  -0.02918038 -0.32045057  1.97282328 -0.25734011]
+ [-1.72788455  0.6164054  -0.02955792 -0.32045057 -0.08781719  1.67919812]
+ [-1.72788541 -1.71759151 -0.02208668 -0.32045057 -0.08781719 -1.13758476]]
+```
+
+## 5. Creating the training and test sets
+Recall that in step 1, we called:
+`python from sklearn.model_selection import train_test_split`. To evaluate the effectiveness of our classifier, we now split `scaled_features` and labels into a training set and test set using scikit-learn's `train_test_split` function:
+
+```python
+x_train, x_test, y_train, y_test = train_test_split(scaled_features, labels, train_size=0.8, test_size=0.2, random_state = 1)
+```
+This returns four kinds of data for our classifier machine:
+1. The training data `x_train`
+2. The testing data `x_test`
+3. The training labels `y_train`
+4. The testing labels `y_test`
+
+## 6. Using the machine
+Recall that in step 1, we called:
+`python from sklearn.neighbors import KNeighborsClassifier`. I'm going to test our model by using `k` value iterated from 1 through 10. 
+This can be done by first instantiating the classifier object:
+```python
+for x in range(1,11):
+    classifier = KNeighborsClassifier(n_neighbors = x)
+    classifier.fit(x_train, y_train)
+    print(str(classifier.score(x_test, y_test)) + " with {0} as k.".format(x))
+```
+
+prints:
+```
+0.8 with 1 as k.
+0.8518018018018018 with 2 as k.
+0.8396396396396396 with 3 as k.
+0.8558558558558559 with 4 as k.
+0.845945945945946 with 5 as k.
+0.8621621621621621 with 6 as k.
+0.8509009009009009 with 7 as k.
+0.8621621621621621 with 8 as k.
+0.8576576576576577 with 9 as k.
+0.863063063063063 with 10 as k.
+```
+We find that overall accuracy of our model reaches when **`k` is set to 10, which results in an approximately 86% accuracy**
+
+If we were to test a larger amount of `k`, we can plot all instances of the object with the corresponding values with `matplotlib`:
+
+```python
+scores = []
+for x in range(1,200):
+    classifier = KNeighborsClassifier(n_neighbors = x)
+    classifier.fit(x_train, y_train.values.ravel())
+    scores.append(classifier.score(x_test, y_test))
+plt.figure(figsize=(14,10))
+plt.plot(range(1,200), scores)
+plt.ylabel('Accuracy')
+plt.xlabel('k value')
+plt.savefig('1to200.png')
+plt.show()
+```
+Prints:
+
+<img src="images/1to200.png"/>
+
+# CONCLUSION
+
+For our model with the features:
+1. The tweet's length
+2. The user's followers
+3. The number of hashtags in that tweet
+4. The number of mentions in that tweet
+5. The amount of words in that tweet
+
+And by iterating `k` from 1 through 100, we can see that the model performs best when `k` is around 25 and 40--with **approximately 87% accuracy**, before eventually falling into a flatline on `k` 85 onwards. 
