@@ -1,4 +1,4 @@
-## Project: Using K-Means Clustering to Map Survey Responses
+# Project: Using K-Means Clustering to Map Survey Responses
 
 **Project description:** In this project, I used my knowledge of Unsupervised Machine Learning to gain insights based on the [FiveThirtyEight Survey](https://github.com/fivethirtyeight/data/tree/master/masculinity-survey) in which they asked 1600+ adult men regarding their masculinity. My goal was to obtain insights that weren't mentioned in their official release of the [survey on their website](https://fivethirtyeight.com/features/what-do-men-think-it-means-to-be-a-man/)
 
