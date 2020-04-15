@@ -5,7 +5,7 @@
 # Data Science
 ### **Supervised Machine Learning**
 [Using K-Neighbors Classifier to Analyze Viral Tweets](/supervisedml_twitter)
-<img src="images/twt.jpg"/>
+<img src="images/1to200.png"/>
 
 ### **Unsupervised Machine Learning**
 [Using K-Means Clustering to Map Survey Responses](/unsupervisedml)
