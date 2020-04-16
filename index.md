@@ -1,8 +1,6 @@
-# Portfolio
+# Data Science
 
 ---
-
-# Data Science
 ### **Supervised Machine Learning**
 [Using K-Neighbors Classifier to Analyze Viral Tweets](/supervisedml_twitter)
 <img src="images/1to200.png"/>
