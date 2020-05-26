@@ -19,7 +19,7 @@
 
 - [Vigenère Cipher](/vigenerecipher)
 - [Caesar Cipher](/caesarcipher)
-
+- [Finite Element Analysis -- Calculating I-Section Dimension](/fea)
 
 ---
 
