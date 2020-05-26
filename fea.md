@@ -4,11 +4,17 @@
 Part of a college assignment, fourth week of May 2020. 
 For the grid P5-51, determine the nodal displacements and the local element forces. 
 
-Let: E = 210 GPa, G = 84 GPa, I = 2 * 10^-4 m^4, J = 1 * 10^-4 m^4, A = 1 * 10^-2 m^2
+Let: 
+- E = 210 GPa
+- G = 84 GPa
+- I = 2 * 10^-4 m^4
+- J = 1 * 10^-4 m^4
+- A = 1 * 10^-2 m^2
 
 <img src="images/fea.png"/>
 
 The formula for *area moment of Inertia* (I) for cross-sectional I-beams is as follows:
+
 <img src="images/fea2.png"/>
 
 With:
