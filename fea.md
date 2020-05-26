@@ -15,7 +15,9 @@ With:
 
 <img src="fea3.png"/>
 *Credit: [The Engineering Toolbox](https://www.engineeringtoolbox.com/area-moment-inertia-d_1328.html)*
+
 In which we cannot solve for the values of **a, b, H, and h** alone. **h** is defined as **H - thickness**. We may define **thickness** as **c**. Note that we are only solving with respect to the X axis, and not the Y axis. 
+
 Regarding this manner, we might iterate over the values of **a, b , H and c** with ***NumPy Arrays***
 
 Source code:
@@ -49,4 +51,5 @@ with a = 0.015, b = 0.035, c = 0.005, d = 0.2
 \*) Units are in metric metres, as specified in the problem above.
 
 We then can conclude that the dimensions we're looking for looks (roughly) like this:
+
 <img src="fea4.png"/>
