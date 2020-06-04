@@ -1,4 +1,4 @@
-# Charis Chrisna's Portfolio
+# Projects
 
 ---
 ### **Supervised Machine Learning**
