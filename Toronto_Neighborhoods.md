@@ -6,7 +6,7 @@ In this project, I'll be exploring and clustering neighborhoods in Toronto with 
 3. Get latitude & longitude coordinates for each neighborhood.
 4. Explore and cluster the neighborhoods in Toronto.
 
-If you prefer the html version, you can click [this link](/Toronto_Neighborhoods_HTML.html)
+**EDIT**: I realized later that the Folium visualization does not render. Alternatively, you can click [this link](/Toronto_Neighborhoods_HTML.html) for the HTML version
 
 ```python
 from bs4 import BeautifulSoup
