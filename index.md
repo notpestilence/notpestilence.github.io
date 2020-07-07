@@ -6,7 +6,7 @@
 * [Naive Bayes Classifier to Predict Tweet Location](/supervisedml_twitter_two)
 
 ### **Unsupervised Machine Learning**
-* [Using K-Means Clustering to Map Survey Responses](/unsupervisedml)
+* [Clustering Toronto Geospatial-based Venue Data](/Toronto_Neighborhoods)
 
 ---
 
