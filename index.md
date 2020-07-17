@@ -2,7 +2,7 @@
 
 ---
 ## Featured
-**[Segmenting Prospective Neighborhoods to Expand a Coffee Shop Chain](/kopikompleks)**
+**[Segmenting Prospective Neighborhoods to Expand a Coffee Shop Chain](/kopikompleks.html)**
 ![Data Visualization Preview](/images/kopikompleks.png)
 
 ### **Supervised Machine Learning**
