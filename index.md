@@ -1,6 +1,10 @@
 # Projects
 
 ---
+## Featured
+* [Segmenting Prospective Neighborhoods to Expand a Coffee Shop Chain](/kopikompleks)
+![Kopi Kompleks Capstone Project](/images/kopikompleks.png, "Project Visualization Preview")
+
 ### **Supervised Machine Learning**
 * [K-Neighbors Classifier to Analyze Viral Tweets](/supervisedml_twitter)
 * [Naive Bayes Classifier to Predict Tweet Location](/supervisedml_twitter_two)
