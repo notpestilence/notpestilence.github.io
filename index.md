@@ -3,7 +3,7 @@
 ---
 ## Featured
 * [Segmenting Prospective Neighborhoods to Expand a Coffee Shop Chain](/kopikompleks)
-![Kopi Kompleks Capstone Project](/images/kopikompleks.png, "Project Visualization Preview")
+<img src="/images/kopikompleks.png" alt="Data Visualization Preview" style="height: 1000px; width:779px;"/>
 
 ### **Supervised Machine Learning**
 * [K-Neighbors Classifier to Analyze Viral Tweets](/supervisedml_twitter)
