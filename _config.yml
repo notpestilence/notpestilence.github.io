@@ -1,4 +1,5 @@
-context: <div class="LI-profile-badge"  data-version="v1" data-size="large" data-locale="in_ID" data-type="vertical" data-theme="light" data-vanity="charischrisna"><a class="LI-simple-link" href='https://id.linkedin.com/in/charischrisna?trk=profile-badge'>Charis Chrisna</a></div>
+context: 
+badge: <div class="LI-profile-badge"  data-version="v1" data-size="large" data-locale="in_ID" data-type="vertical" data-theme="light" data-vanity="charischrisna"><a class="LI-simple-link" href='https://id.linkedin.com/in/charischrisna?trk=profile-badge'>Charis Chrisna</a></div>
 title: Charis Chrisna's Portfolio
 #logo: "/images/charis.png?raw=true" # your photo (or logo) here
 description: > # your text below (remove <br> elements if you don't need line breaks)
