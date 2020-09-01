@@ -2,7 +2,7 @@ title: Charis Chrisna's Portfolio
 #logo: "/images/charis.png?raw=true" # your photo (or logo) here
 description: > # your text below (remove <br> elements if you don't need line breaks)
   <script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
-  <div class="LI-profile-badge"  data-version="v1" data-size="medium" data-locale="in_ID" data-type="vertical" data-theme="light" data-vanity="charischrisna"><a class="LI-simple-link" href='https://id.linkedin.com/in/charischrisna?trk=profile-badge'>Charis Chrisna</a></div>
+  <div class="LI-profile-badge"  data-version="v1" data-size="medium" data-locale="in_ID" data-type="horizontal" data-theme="light" data-vanity="charischrisna"><a class="LI-simple-link" href='https://id.linkedin.com/in/charischrisna?trk=profile-badge'>Charis Chrisna</a></div>
   Hi! My name is Charis Chrisna. I'm a hobbyist data scientist, using this site as a portfolio of my built projects and upcoming showcases.
   <br><br>
   Reach me out at:
