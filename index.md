@@ -1,5 +1,5 @@
 # Projects
-
+<div class="LI-profile-badge"  data-version="v1" data-size="medium" data-locale="in_ID" data-type="vertical" data-theme="light" data-vanity="charischrisna"><a class="LI-simple-link" href='https://id.linkedin.com/in/charischrisna?trk=profile-badge'>Charis Chrisna</a></div>
 ---
 ## Featured
 **[Segmenting Prospective Neighborhoods to Expand a Coffee Shop Chain](/kopikompleksproject.html)**
