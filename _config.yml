@@ -11,4 +11,11 @@ description: > # your text below (remove <br> elements if you don't need line br
 theme: jekyll-theme-minimal
 google_analytics: UA-000000-0 # your Google Analytics tracking ID here
 ---
-<div class="LI-profile-badge"  data-version="v1" data-size="large" data-locale="in_ID" data-type="vertical" data-theme="light" data-vanity="charischrisna"><a class="LI-simple-link" href='https://id.linkedin.com/in/charischrisna?trk=profile-badge'>Charis Chrisna</a></div>
+
+<!DOCTYPE html>
+<html lang="en">
+  <body>
+    <div class="LI-profile-badge"  data-version="v1" data-size="large" data-locale="in_ID" data-type="vertical" data-theme="light" data-vanity="charischrisna"><a class="LI-simple-link" href='https://id.linkedin.com/in/charischrisna?trk=profile-badge'>Charis Chrisna</a></div>
+  </body>
+</html>
+
