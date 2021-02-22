@@ -1,6 +1,8 @@
 # Projects
 ---
 ## Featured
+**[Sequential Deep Learning: Global Life Expectancy Regression](/life_expectancy.html)**
+![Illustration](/images/lifespan.jpg)
 **[Segmenting Prospective Neighborhoods to Expand a Coffee Shop Chain](/kopikompleksproject.html)**
 ![Data Visualization Preview](/images/kopikompleks.png)
 
