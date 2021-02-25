@@ -1,9 +1,14 @@
 # Projects
 ---
 ## Featured
+**[Lung Condition Classification on COVID-19 Image Dataset](/lung_classification.html)**
+![Preview](/images/samples.jpg)
+
+---
 **[Sequential Deep Learning: Global Life Expectancy Regression](/life_expectancy.html)**
 ![Illustration](/images/lifespan.jpg)
 
+---
 
 **[Segmenting Prospective Neighborhoods to Expand a Coffee Shop Chain](/kopikompleksproject.html)**
 ![Data Visualization Preview](/images/kopikompleks.png)
